@@ -1,0 +1,26 @@
+<!doctype html>
+<meta charset="utf-8">
+<script src="dilemma.js"></script>
+
+<p>This page uses <strong>ES6 generators</strong> which only work in
+Firefox and Chrome so far. (To enable generators in Chrome,
+visit <code>chrome://flags/#enable-javascript-harmony</code> and click
+Enable.)</p>
+
+<p>To use this page, hop into your developer tools (Cmd+Opt+I on a Mac in Chrome or Firefox) and type:</p>
+
+<pre>Dilemma.play(goodGuyGreg, scumbagSteve, 5)</pre>
+
+<p>You'll see console.log output for a 5-round game of Prisoner's
+Dilemma. goodGuyGreg cooperates every time, because that's how he
+is:</p>
+
+<pre>
+function* goodGuyGreg() {
+    // Good Guy Greg always does the right thing.
+    while (true)          // crashes on your couch
+        yield COOPERATE;  // makes breakfast
+}
+</pre>
+
+
